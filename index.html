@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thor's Awesome Page!</title>
+    <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -23,8 +29,20 @@
     <section id="welcome-section">
       <h1>Welcome to My Page!</h1>
     </section>
-    <section id="projects">
-      <div class="project-tile">
+    <section id="projects" class="projects-section">
+      <div class="projects-grid project-tile">
+        <a href="#">
+          <figure>
+            <img src="/images/LCRG-AboutMe.png" />
+            <figcaption>My DGM 1600 "About Me" Project</figcaption>
+          </figure>
+        </a>
+        <a href="#">
+          <figure>
+            <img src="/images/LCRG-AboutMe.png" />
+            <figcaption>My DGM 1600 "About Me" Project</figcaption>
+          </figure>
+        </a>
         <a href="#">
           <figure>
             <img src="/images/LCRG-AboutMe.png" />
@@ -33,9 +51,23 @@
         </a>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="contact-section">
       <h1>Contact</h1>
-      <img src="https://picsum.photos/800/900"/>
+      <div class="contact-links">
+        <a
+          href="https://facebook.com/freecodecamp"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-facebook-square"></i> Facebook</a
+        >
+        <a
+      id="profile-link"
+      href="https://github.com/thortek"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-github"></i> Github</a
+    >
+      </div>
     </section>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
