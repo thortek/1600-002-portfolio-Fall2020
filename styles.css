@@ -118,6 +118,11 @@ h1 {
     color: #fff;
 }
 
+h3 {
+  font-size: 2rem;
+  color: #ddd;
+}
+
 @media screen and (max-width: 50em) {
   .contact-links {
     flex-direction: column;
