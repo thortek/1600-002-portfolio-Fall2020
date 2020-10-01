@@ -49,6 +49,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100vh;
     background-color: #000;
     background-image: linear-gradient(135deg, #698fb5 0%, #1f1925 100%);
@@ -115,4 +116,14 @@ figure img {
 h1 {
     font-size: 3rem;
     color: #fff;
+}
+
+@media screen and (max-width: 50em) {
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  #welcome-section {
+    background-image: linear-gradient(90deg, #5db34b 0%, #e4a00c 100%);
+  }
 }
