@@ -3,12 +3,18 @@
     box-sizing: border-box;
 }
 
-.container {
+.mainContainer {
     display: flex;
+    height: 100vh;
 }
 
 .main {
     margin: 8rem;
+}
+
+img {
+    position: relative;
+    z-index: 1;
 }
 
 header, footer {
