@@ -58,9 +58,10 @@ function addStarField(element, numStars) {
         star.style.setProperty('width', '2px')
         star.style.setProperty('height', '2px')
         star.style.setProperty('background-color', 'white')
+        //star.style.setProperty('z-index', '-1')
         let xy = getRandomPosition()
         star.style.left = `${xy[0]}px`
-        star.style.top = `${xy[1]}px `
+        star.style.top = `${xy[1]}px`
         element.appendChild(star)
     }
 }

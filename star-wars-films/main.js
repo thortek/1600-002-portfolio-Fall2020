@@ -8,8 +8,9 @@ for (let i = 0; i < 7; i++) {
     let figImg = document.createElement('img')
     figImg.src = `https://starwars-visualguide.com/assets/img/films/${i + 1}.jpg`
     let figCaption = document.createElement('figcaption')
-    // don't do strict equality below - you are checking a string against a number!
-    const foundFilm = films.find(film => getLastNumber(film.url) == (i + 1))
+
+    const foundFilm = films.find(film => getLastNumber(film.url) === (i + 1).toString())
+ 
     figCaption.textContent = foundFilm.title
 
     figure.appendChild(figImg)
@@ -17,4 +18,3 @@ for (let i = 0; i < 7; i++) {
 
     main.appendChild(figure)
 }
-  
