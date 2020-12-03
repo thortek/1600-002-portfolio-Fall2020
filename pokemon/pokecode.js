@@ -11,7 +11,7 @@ async function getAPIData(url) {
 
 // now, use the async getAPIData function
 function loadPage() {
-  getAPIData(`https://pokeapi.co/api/v2/pokemon`).then(
+  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=3`).then(
     //?limit=25&offset=800
     async (data) => {
       for (const pokemon of data.results) {
@@ -76,7 +76,7 @@ function populateCardBack(pokemon) {
   pokeBack.className = 'card__face card__face--back'
   let backLabel = document.createElement('p')
   backLabel.textContent = `${pokemon.moves.length} moves`
-  backLabel.addEventListener('click', () => getMovesDetails(pokemon.moves))
+ //backLabel.addEventListener('click', () => getMovesDetails(pokemon.moves))
   pokeBack.appendChild(backLabel)
   return pokeBack
 }
@@ -91,7 +91,10 @@ function getMovesDetails(pokemonMoves) {
       return moveData
     }
   })
-  console.log(nonNullMoves.length)
+  Promise.all(nonNullMoves).then((values) => {
+    console.log(values)
+  })
+  
   
 /*   const result = pokemonMoves.reduce(async (acc, move) => {
     const moveData = await getAPIData(move.move.url)
